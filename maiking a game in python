@@ -1,0 +1,44 @@
+import turtle
+
+turtle_d = turtle.Screen()
+turtle_d.bgcolor("blue")
+turtle_d.title("game")
+turtle_X = turtle.Turtle()
+
+def turtle_forward():
+    turtle_X.forward(10)
+
+def turtle_right():
+    #turtle_X.right(10)
+    turtle_X.setheading(turtle_X.heading()+30)
+
+def turtle_left():
+    turtle_X.setheading(turtle_X.heading()-30)
+    #turtle_X.left(10)
+
+def turtle_clear():
+    turtle_X.clear()
+
+def turtle_home():
+    turtle_X.home()
+
+
+def turtle_penUP():
+    turtle_X.penup()
+
+def turtle_penDOWN():
+    turtle_X.pendown()
+
+
+turtle_d.listen()
+turtle_d.onkey(fun=turtle_forward, key="space")
+turtle_d.onkey(fun=turtle_right, key="Up")   # Removed parentheses
+turtle_d.onkey(fun=turtle_left, key="Down")  # Removed parentheses\
+turtle_d.onkey(fun=turtle_clear,key="0")  # Removed parentheses
+turtle_d.onkey(fun=turtle_home,key="1")  # Removed parentheses
+turtle_d.onkey(fun=turtle_penUP,key="2")  # Removed parentheses
+turtle_d.onkey(fun=turtle_penDOWN,key="3")  # Removed parentheses
+
+
+
+turtle_d.mainloop()
